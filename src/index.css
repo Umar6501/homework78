@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: Mplus 1p;
+  scroll-behavior: smooth;
+}
+span {
+  display: inline-block;
+}
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #22343d;
+  font-weight: 400;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+main {
+  z-index: -1;
+}
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.hero-section {
+  background-image: url(../public/assets/heroBackImg.svg);
+}
+.button-hero {
+  transition: 0.1s linear;
+}
+.button-hero:hover {
+  background-color: #122947;
+  color: #fff;
+  transition: 0.1s linear;
+}
+.card {
+  text-align: center;
+}
+.txts {
+  padding-top: 25rem;
+}
+.pharDec {
+  text-decoration: underline;
+}
+.section-2 {
+  background-image: url(../public/assets/section-2.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section-4 {
+  background-image: url(../public/assets/history-img.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* .box:nth-child(1) {
+  background-image: url(../public//assets/katalog-1.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(2) {
+  background-image: url(../public//assets/katalog-2.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(3) {
+  background-image: url(../public//assets/katalog-3.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(4) {
+  background-image: url(../public//assets/katalog-4.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(5) {
+  background-image: url(../public//assets/katalog-5.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(6) {
+  background-image: url(../public//assets/katalog-6.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(7) {
+  background-image: url(../public//assets/katalog-7.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(8) {
+  background-image: url(../public//assets/katalog-8.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(9) {
+  background-image: url(../public//assets/katalog-9.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(10) {
+  background-image: url(../public//assets/katalog-10.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(11) {
+  background-image: url(../public//assets/katalog-11.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box:nth-child(12) {
+  background-image: url(../public//assets/katalog-12.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+.box {
+  width: 25rem;
+  height: 30rem;
+  display: flex;
+}
+.box-title-left {
+  padding-left: 5px;
+  margin-top: 25rem;
+  font-size: 1.5rem;
+}
+.box-title-left p {
+  color: #9a9da0;
+}
+
+.box-title-right {
+  margin-top: 25rem;
+  font-size: 1.5rem;
+  padding-left: 3rem;
+}
+.box-title-right p {
+  color: #9a9da0;
+}
