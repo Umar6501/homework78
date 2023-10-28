@@ -4,31 +4,17 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Katalog1 = () => {
-  // const [posts, setPosts] = useState([]);
   const [allPosts, setAllPosts] = useState([]);
   const [posts, setPosts] = useState([]);
-  // const fetchPosts = async () => {
-  //   try {
-  //     const res = await axios.get("http://localhost:3000/cosmetics?_limit=12");
-  //     setPosts(res.data);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchPosts();
-  // }, []);
-  // ///////////////////////////
-  // Paginition
-  let limit = 6;
+  const [page, setPage] = useState(1);
+  let limit = 4;
   let numOfpages = Math.ceil(allPosts.length / limit);
   let arrBtns = [];
   for (let i = 1; i <= numOfpages; i++) {
     arrBtns.push(i);
   }
 
-  const fetchPosts = async (page: string) => {
+  const fetchPosts = async (page) => {
     try {
       let url = `http://localhost:3000/cosmetics?_page=${page}&_limit=${limit}`;
       const res = await axios.get(url);
@@ -37,11 +23,25 @@ const Katalog1 = () => {
       console.log(err);
     }
   };
+
+  const fetchAllPosts = async () => {
+    try {
+      const res = await axios.get("http://localhost:3000/cosmetics");
+      setAllPosts(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
-    fetchPosts();
+    fetchAllPosts();
   }, []);
 
-  ////////////////////////////////////////////////////////////////
+  useEffect(() => {
+    fetchPosts(page);
+  }, [page]);
+
+  //////////////////////////////////////////////////////////////
   return (
     <div>
       <section>
@@ -65,13 +65,7 @@ const Katalog1 = () => {
               </div>
             </Link>
           ))}
-          <div className="d-flex justify-center buttons">
-            {arrBtns?.map((item) => (
-              <button key={item} onClick={() => setPage(item)}>
-                {item}
-              </button>
-            ))}
-          </div>
+
           {/* <Link to="/oneCatalog">
             <div className="boxes grid grid-cols-4 p-[5rem] gap-2">
               <div className="box">
@@ -206,10 +200,16 @@ const Katalog1 = () => {
             </div>
           </Link> */}
 
-          <div className="pag flex text-[2rem] ms-[53rem] items-center gap-4">
-            <p className="cursor-pointer">1</p>
-            <div className="line w-[5rem] h-[1px] bg-black opacity-1"></div>
-            <p className="cursor-pointer">8</p>
+          <div className="flex justify-center buttons items-center w-full text-center gap-4">
+            {arrBtns?.map((item) => (
+              <button
+                key={item}
+                onClick={() => setPage(item)}
+                className="text-6xl p-5 bg-slate-100 rounded-full hover:bg-slate-200"
+              >
+                {item}
+              </button>
+            ))}
           </div>
         </div>
       </section>
