@@ -47,7 +47,7 @@ const Katalog1 = () => {
       <section>
         <div className="container grid grid-cols-4 gap-6">
           {posts.map((post, index) => (
-            <Link to={`/category/${post.id}`}>
+            <Link to={`/oneCatalog/${post.id}`}>
               <div className="box" key={index}>
                 <img
                   src={post.image}
@@ -65,140 +65,6 @@ const Katalog1 = () => {
               </div>
             </Link>
           ))}
-
-          {/* <Link to="/oneCatalog">
-            <div className="boxes grid grid-cols-4 p-[5rem] gap-2">
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>High</h5>
-                  <p>крем для лица</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>990 $</h5>
-                  <p>50ml</p>
-                </div>
-              </div>
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Rest</h5>
-                  <p>минеральная пудра</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>690 $</h5>
-                  <p>20g</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Rose</h5>
-                  <p>крем для лица</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>890 $</h5>
-                  <p>50ml</p>
-                </div>
-              </div>
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Milk</h5>
-                  <p>масло для тела</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>790 $</h5>
-                  <p>150ml</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Paradise</h5>
-                  <p>минеральная пудра</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>590 $</h5>
-                  <p>15g</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Sun</h5>
-                  <p>бомбочка для ванны</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>90 $</h5>
-                  <p>20g</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Violet</h5>
-                  <p>крем для лица</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>890 $</h5>
-                  <p>50ml</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Clean</h5>
-                  <p>маска для лица</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>490 $</h5>
-                  <p>100g</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Coconut</h5>
-                  <p>масло для тела</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>990 $</h5>
-                  <p>300ml</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Lavender</h5>
-                  <p>крем для лица</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>290 $</h5>
-                  <p>50g</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Lotos</h5>
-                  <p>маска для лица</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>890 $</h5>
-                  <p>50ml</p>
-                </div>
-              </div>
-
-              <div className="box">
-                <div className="box-title-left">
-                  <h5>Earth</h5>
-                  <p>крем для лица</p>
-                </div>
-                <div className="box-title-right">
-                  <h5>90 $</h5>
-                  <p>20g</p>
-                </div>
-              </div>
-            </div>
-          </Link> */}
 
           <div className="flex justify-center buttons items-center w-full text-center gap-4">
             {arrBtns?.map((item) => (
